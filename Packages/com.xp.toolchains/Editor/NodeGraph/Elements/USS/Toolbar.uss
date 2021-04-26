@@ -1,0 +1,27 @@
+#scroll{
+    background-color: black;
+    border-radius: 10px;
+}
+
+Button {
+    height: 30px;
+    background-color: black;
+    border-radius: 10px;
+    font-size:20px;
+    font-style:bold;
+}
+
+Label {
+    font-size:20px;
+    font-style:bold;
+}
+
+.btn_noSel {
+    color:white;
+    font-size:16px;
+}
+
+.btn_sel {
+    color:green;
+    font-size:16px;
+}

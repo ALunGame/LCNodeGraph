@@ -1,0 +1,10 @@
+
+.btn_noSel {
+    color:black;
+    font-size:16px;
+}
+
+.btn_sel {
+    color:green;
+    font-size:16px;
+}

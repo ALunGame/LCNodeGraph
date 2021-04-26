@@ -1,0 +1,19 @@
+{
+  "name": "com.xp.toolchains",
+  "version": "1.0.0",
+  "displayName": "XP-Toolchains",
+  "description": "51\u533a\uff1aXP-Framework-master",
+  "unity": "2019.4",
+  "unityRelease": "0b5",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "XP Team",
+    "email": "925773930@qq.com",
+    "url": "https://www.dayukeji.com/"
+  },
+  "type": "tool"
+}
