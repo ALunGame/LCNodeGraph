@@ -10,6 +10,41 @@ namespace XPToolchains.Help
     /// </summary>
     public class EDReflectHelp
     {
+        private static Dictionary<string, Type> TypeCache = new Dictionary<string, Type>();
+        public static Type GetTypeByFullName(string fullName)
+        {
+            if (TypeCache.ContainsKey(fullName))
+            {
+                return TypeCache[fullName];
+            }
+            Type type = null;
+            Assembly[] assemblyArray = AppDomain.CurrentDomain.GetAssemblies();
+            int assemblyArrayLength = assemblyArray.Length;
+            for (int i = 0; i < assemblyArrayLength; ++i)
+            {
+                type = assemblyArray[i].GetType(fullName);
+                if (type != null)
+                {
+                    return type;
+                }
+            }
+
+            for (int i = 0; (i < assemblyArrayLength); ++i)
+            {
+                Type[] typeArray = assemblyArray[i].GetTypes();
+                int typeArrayLength = typeArray.Length;
+                for (int j = 0; j < typeArrayLength; ++j)
+                {
+                    if (typeArray[j].Name.Equals(fullName))
+                    {
+                        return typeArray[j];
+                    }
+                }
+            }
+            return type;
+
+        }
+
         public static List<Type> GetAllClassByClass<T>(string assemblyPath = "")
         {
             string asPath = assemblyPath;

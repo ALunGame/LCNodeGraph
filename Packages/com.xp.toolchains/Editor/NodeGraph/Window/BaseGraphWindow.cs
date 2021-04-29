@@ -222,7 +222,7 @@ namespace XPToolchains.NodeGraph
                 return;
             graphDict.Remove(selGraphPath);
             File.Delete(selGraphPath);
-            if (graphDict.Count >= 0)
+            if (graphDict.Count > 0)
             {
                 ChangeGraph(graphDict.Keys.ToList()[0]);
             }

@@ -248,13 +248,11 @@ namespace XPToolchains.NodeGraph
 
         public static bool FilterNodeByNameSpace(Type nodeType, BaseGraphWindow baseGraphWindow)
         {
-            return true;
             string nameSpace = nodeType.Namespace;
             if (nameSpace == null)
-            {
                 return true;
-            }
-            bool isContain = baseGraphWindow.nodeNameSpaces.All(x => nameSpace.Contains(x));
+
+            bool isContain = baseGraphWindow.nodeNameSpaces.Any(x => nameSpace.Contains(x));
             if (isContain)
                 return true;
 

@@ -9,12 +9,11 @@ namespace XPToolchains.NodeGraph
     public class NodeMenuItemAttribute : Attribute
     {
         public string menuTitle;
-        public Type onlyCompatibleWithGraph;
-
-        public NodeMenuItemAttribute(string menuTitle = null, Type onlyCompatibleWithGraph = null)
+        public Type serializeType;
+        public NodeMenuItemAttribute(string menuTitle = null,Type serializeType = null)
         {
             this.menuTitle = menuTitle;
-            this.onlyCompatibleWithGraph = onlyCompatibleWithGraph;
+            this.serializeType = serializeType;
         }
     }
 

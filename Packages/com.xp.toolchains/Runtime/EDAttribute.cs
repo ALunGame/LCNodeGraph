@@ -2,7 +2,7 @@
 using UnityEngine;
 
 //只读属性
-namespace XPToolchains.Help
+namespace XPToolchains.EDAttribute
 {
     public class EDReadOnlyAttribute : PropertyAttribute
     {
